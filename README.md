@@ -15,26 +15,26 @@ With the **Google Maps Scraper**, you can obtain detailed data about businesses 
 <br>
 
 ## 📦 Required Packages
-To run this scraper, you'll need the following Python packages:
-- `requests_html` - for making HTML requests and rendering dynamic content
-- `urllib` - for URL handling
-- `json` - for managing structured data in JSON format
+To run this scraper, you'll need the following TypeScript packages:
+- `axios` - for making HTTP requests
+- `cheerio` - for parsing HTML and traversing the DOM
+- `querystring` - for URL handling
 
 <br>
 
 ## ➡️ Code Example
 Here's a basic usage example:
 
-```python
-from mapScraper import placesCrawlerV2
+```typescript
+import { search } from './mapScraper/placesCrawlerV2';
 
-# Define your query
-query = "Gym in Seville Spain"
-# Run the search
-results = placesCrawlerV2.search(query)
+// Define your query
+const query = "Gym in Seville Spain";
+// Run the search
+const results = await search(query);
 
-# Display the results
-print(results)
+// Display the results
+console.log(results);
 ```
 
 <br>
